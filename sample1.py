@@ -25,7 +25,7 @@ while True:
     data = o.getLatestData(uId)
 
     # センサーデータの確認
-    print(vars(data))
+    #print(vars(data))
 
     if data is not None:
 
