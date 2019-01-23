@@ -30,7 +30,8 @@ while True:
         if data.tick_last_update > latest_update:
             print('Illumination: {} lx'.format(data.val_light))
             # センサーデータの確認
-            print('センサーデータ：　{} '.vars(data))
+            #print('センサーデータ：　{} '.vars(data))
+            print('Sensor Data: {}'.format(data.vars()))
 
         latest_update = data.tick_last_update
 
