@@ -24,7 +24,8 @@ while True:
     #環境センサーから取得しているデータ
     data = o.getLatestData(uId)
 
-    data.vars()
+    # センサーデータの確認
+    print(vars(data))
 
     if data is not None:
 
