@@ -36,4 +36,6 @@ while True:
 
         latest_update = data.tick_last_update
 
+        print('send')
+
     time.sleep(CHECK_SPAN)
