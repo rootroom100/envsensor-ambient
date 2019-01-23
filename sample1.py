@@ -24,7 +24,8 @@ while True:
     #環境センサーから取得しているデータ
     data = o.getLatestData(uId)
 
-    vars(data)
+    data.vars()
+
     if data is not None:
 
         if data.tick_last_update > latest_update:
