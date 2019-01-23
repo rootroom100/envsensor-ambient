@@ -8,6 +8,7 @@ import datetime
 
 CHECK_SPAN = int(os.environ.get('CHECK_SPAN', '10'))
 
+#　MACアドレスを取得
 BLUETOOTH_DEVICEID = os.environ.get('BLUETOOTH_DEVICEID', 0)
 BLUETOOTH_DEVICE_ADDRESS = os.environ.get('BLUETOOTH_DEVICE_ADDRESS', None)
 if BLUETOOTH_DEVICE_ADDRESS is None:
@@ -19,7 +20,11 @@ o.start()
 
 latest_update = datetime.datetime.now()
 while True:
+
+    #環境センサーから取得しているデータ
     data = o.getLatestData(uId)
+
+    vars(data)
     if data is not None:
 
         if data.tick_last_update > latest_update:
